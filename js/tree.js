@@ -498,9 +498,6 @@ var tree = (function(){
             ret += 'select\n';
             var maxLen = 0;
             for( var i = 2; i < chunks.length; i++ ) { 
-                var tbl = ddl.find(chunks[i]);
-                if( tbl == null )
-                    continue;
                 var len = (chunks[i]+'.ID').length;
                 if( maxLen < len )
                     maxLen = len;
