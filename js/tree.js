@@ -345,7 +345,9 @@ var tree = (function(){
         		return this.content;
         	
             if( this.children.length == 0 ) {
-            	var pad = tab+' '.repeat(this.parent.maxChildNameLen() - this.parseName().length);
+            	let pad = tab;
+				if( this.parent != undefined )
+					pad += ' '.repeat(this.parent.maxChildNameLen() - this.parseName().length);
             	return this.parseName()+pad+this.parseType();
             } 
             
