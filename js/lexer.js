@@ -200,7 +200,7 @@ var lexer = (function(){
                 }
                 if( ("REM"==token.toUpperCase() || "REMA"==token.toUpperCase() || "REMAR"==token.toUpperCase() || "REMARK"==token.toUpperCase()
                    ||"PRO"==token.toUpperCase() || "PROM"==token.toUpperCase() || "PROMP"==token.toUpperCase() || "PROMPT"==token.toUpperCase()
-                		) && (last == null || ("\n" == last.value||"\r" == last.value)) 
+                        ) && (last == null || ("\n" == last.value||"\r" == last.value)) 
                 ) {     
                     ret.push(new LexerToken(token, pos-token.length, -9, "line-comment", line, col));
                     continue;

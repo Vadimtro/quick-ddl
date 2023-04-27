@@ -154,7 +154,7 @@ function ref_error( lines ) {
     var ret  = [];
     
     for( var i = 0; i < ddl.forest.length; i++ ) {
-    	var node = ddl.forest[i];
+        var node = ddl.forest[i];
         var nodeUpperContent = node.trimmedContent().toUpperCase();
         if( node.parseType() == 'VIEW' ) {
             var chunks = nodeUpperContent.split(' ');
